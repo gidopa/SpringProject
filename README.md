@@ -1,5 +1,32 @@
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
+# 프로젝트 시작전 규칙 명세
+
+### :flags: 기본 규칙
+- Naming Convention
+  - JAVA : Camel Case
+  - DB, JS : snake_case
+  - 최대한 변수의 의미에 중점을 둔 네이밍
+    
+- Comment
+  - 클래스와 메소드가 어떤 역할을 하는지
+  - 다중 if/for 등 로직이 복잡한 경우 / 특별한 제약이 필요한 경우
+  - 변수의 이름만으로 설명이 부족한 경우
+ 
+- Debug
+  - System.out.println 보다는 로깅 라이브러리 활용
+ 
+- 기타
+  - 원래 사용하던 VO 클래스는 DTO로 클래스 생성해주세요
+  - DTO의 필드도 Camel Case로 변수명 작성해주세요
+  - Boot에서 mybatis.configuration.map-underscore-to-camel-case=true 를 설정해주면 DB에서 user_name으로 select 해와도 객체의 userName에 알아서 setUserName으로 잘 넣어줍니다
+  - 스프링 MVC, 제발 인터셉터에서 getViewName 이런걸로 추출해서 viewName 넘기지 말고 그냥 컨트롤러에서 명시적으로 처리해주세요
+  - 유닛 테스트 및 통합 테스트 시도 ,,,,
+  - SRP(단일 책임 원칙)을 준수하여 함수와 클래스가 하나의 책임만을 갖도록 설계
+  - 함수나 클래스는 작고 명확하게 유지하면서 코드의 중복을 줄여 유지보수를 용이하도록 설계
+  -  간단한 스크럼 회의 이후 스프린트 진행, 진행 상태확인 및 대략적인 소모차트 예상 , 스프린트 리뷰 등의 방법으로 지속적인 커뮤니케이션 유지
+
+
 <div align="center">
   <h1>스프링 프로젝트</h1>
 </div>
